@@ -19,7 +19,7 @@ function SignIn() {
   const [password, setPassword] = useState('');
 
   const handleSubmit = () => {
-    fetch('http://hackhatweet-backend-gs6i5h7nm-ophelies-projects-722a4a6d.vercel.app/users/signin', {
+    fetch('https://hackhatweet-backend.vercel.app/users/signin', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ username, password }),

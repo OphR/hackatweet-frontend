@@ -23,7 +23,7 @@ function Tweet(props) {
   };
 
   const handleDelete = () => {
-    fetch('http://hackhatweet-backend-gs6i5h7nm-ophelies-projects-722a4a6d.vercel.app/tweets', {
+    fetch('https://hackhatweet-backend.vercel.app/tweets', {
       method: 'DELETE',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ token: user.token, tweetId: props._id }),

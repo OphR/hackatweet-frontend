@@ -10,7 +10,7 @@ function Trends() {
   const [trendsData, setTrendsData] = useState([]);
 
   useEffect(() => {
-    fetch(`http://hackhatweet-backend-gs6i5h7nm-ophelies-projects-722a4a6d.vercel.app/tweets/trends/${user.token}`)
+    fetch(`https://hackhatweet-backend.vercel.app/tweets/trends/${user.token}`)
       .then(response => response.json())
       .then(data => {
         data.result && setTrendsData(data.trends);

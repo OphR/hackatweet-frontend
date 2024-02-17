@@ -27,7 +27,7 @@ function Home() {
       return;
     }
 
-    fetch(`http://hackhatweet-backend-gs6i5h7nm-ophelies-projects-722a4a6d.vercel.app/tweets/all/${user.token}`)
+    fetch(`https://hackhatweet-backend.vercel.app/tweets/all/${user.token}`)
       .then(response => response.json())
       .then(data => {
         data.result && dispatch(loadTweets(data.tweets));
@@ -41,7 +41,7 @@ function Home() {
   };
 
   const handleSubmit = () => {
-    fetch('http://hackhatweet-backend-gs6i5h7nm-ophelies-projects-722a4a6d.vercel.app/tweets', {
+    fetch('https://hackhatweet-backend.vercel.app/tweets', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ token: user.token, content: newTweet }),
